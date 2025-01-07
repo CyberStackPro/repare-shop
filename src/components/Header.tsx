@@ -1,8 +1,10 @@
 import React from "react";
 import NavButtons from "./NavButtons";
-import { Home, Ticket, UsersRoundIcon } from "lucide-react";
+import { Home, LogOut, Ticket, UsersRoundIcon } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "./theme-toggler";
+import { Button } from "./ui/button";
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 type Props = {};
 
@@ -34,6 +36,19 @@ export default function Header({}: Props) {
           />
           {/* Theme Toggle */}
           <ThemeToggle />
+
+          <Button
+            variant={"outline"}
+            size={"icon"}
+            aria-label="Log Out"
+            title="Log Out"
+            className="rounded-full"
+            asChild
+          >
+            <LogoutLink>
+              <LogOut />
+            </LogoutLink>
+          </Button>
         </div>
       </div>
     </header>
