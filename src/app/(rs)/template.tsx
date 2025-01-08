@@ -1,13 +1,19 @@
-export default async function Template({
+"use client";
+import { motion } from "framer-motion";
+export default function Template({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <div className="animate-appear">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="animate-ppear"
+    >
       {/* Header */}
       {children}
-      {/* <div className=""></div> */}
-    </div>
+      {/* <motion.div className=""></motion.div> */}
+    </motion.div>
   );
 }

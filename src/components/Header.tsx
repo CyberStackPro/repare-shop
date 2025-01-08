@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import NavButtons from "./NavButtons";
 import { Home, LogOut, Ticket, UsersRoundIcon } from "lucide-react";
@@ -5,12 +6,13 @@ import Link from "next/link";
 import { ThemeToggle } from "./theme-toggler";
 import { Button } from "./ui/button";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import { motion } from "framer-motion";
 
 type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="animate-slide bg-background h-12 p-2 border-b border-border sticky top-0 z-20">
+    <motion.header className="animate-slide bg-background h-12 p-2 border-b border-border sticky top-0 z-20">
       <div className="flex h-8 items-center justify-between w-full">
         {/* Left */}
         <div className="flex items-center gap-2">
@@ -51,6 +53,6 @@ export default function Header({}: Props) {
           </Button>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

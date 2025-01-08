@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 
 type Props = {
-  icon: LucideIcon;
+  icon: React.ElementType;
   label?: string;
   href?: string;
 };
